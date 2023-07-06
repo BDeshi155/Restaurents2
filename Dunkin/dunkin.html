@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dunkin Donut's</title>
+<link rel="icon" href="../Home/logo.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  
+  background-image: url("dunkin1.png");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+.cart {
+  margin-top: 40px;
+}
+
+.cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-total {
+  font-weight: bold;
+}
+
+.checkout-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-light-grey w3-border w3-padding">
+    <a href="../Home/index.html" class="w3-bar-item w3-button w3-mobile">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-mobile">ABOUT</a>
+    <a href="#menu" class="w3-bar-item w3-button w3-mobile">MENU</a>
+    <a href="#order" class="w3-bar-item w3-button w3-mobile">ORDER LIST</a>
+    <div class="w3-dropdown-hover">
+      <button class="w3-button">Login</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="../Login/index3 login.html" class="w3-bar-item w3-button">Login</a>
+        <a href="../Login/index2 signup.html" class="w3-bar-item w3-button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  
+  <div class="w3-display-bottomleft w3-center">
+    <span style="background-color: black; padding: 10px; font-size: 90px; font-weight: bold;" class="w3-text-white">Dunkin Donut's</span>
+  </div>
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">--Open from 6am to 5pm</span>
+  </div>
+  
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class=" w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+    <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+    </div>
+    <img src="dunkin2.png" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+    <p><strong>Address:</strong> Bashundhara,Dhaka</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Bread Basket</h5>
+      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p><br>
+    
+      <h5>Honey Almond Granola with Fruits</h5>
+      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p><br>
+    
+      <h5>Belgian Waffle</h5>
+      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p><br>
+    
+      <h5>Scrambled eggs</h5>
+      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p><br>
+    
+      <h5>Blueberry Pancakes</h5>
+      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">
+        Regular coffee $2.50
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p><br>
+    
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">
+        Chocolate espresso with milk $4.50
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p><br>
+    
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">
+        Whiskey and coffee $5.00
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p><br>
+    
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">
+        Hot tea, except not hot $3.00
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">
+        Coke, Sprite, Fanta, etc. 2.50
+        <button class="w3-button w3-border w3-hover-black add-to-cart-btn" style="float: right;">+</button>
+      </p>
+    </div>
+    <img src="dunkin3.png" style="width:100%;max-width:1000px;margin-top:32px;">
+    </div>
+    
+    
+</div>
+
+<h2 id="order">Order List</h2>
+  <div class="cart">
+    <ul class="cart-items"></ul>
+    <p class="cart-total">Total: $0.00</p>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <a href="#" class="ga-bottom">Copyright 2023</a> by Refsnes Data. All Rights Reserved.<br>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+
+const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+const cartItemsList = document.querySelector('.cart-items');
+const cartTotal = document.querySelector('.cart-total');
+const checkoutBtn = document.querySelector('.checkout-btn');
+
+let cartTotalAmount = 0;
+
+addToCartButtons.forEach((button) => {
+  button.addEventListener('click', addToCart);
+});
+
+function addToCart(event) {
+  const product = event.target.parentElement;
+  const productName = product.previousElementSibling.textContent;
+  const productPrice = parseFloat(product.textContent.replace(/^\D+/g, ''));
+
+  const cartItem = document.createElement('li');
+  cartItem.className = 'cart-item';
+  cartItem.innerHTML = `
+    <span>${productName}</span>
+    <span>$${productPrice.toFixed(2)}</span>
+    <button class="remove-from-cart-btn">Remove</button>
+  `;
+
+  const removeFromCartButton = cartItem.querySelector('.remove-from-cart-btn');
+  removeFromCartButton.addEventListener('click', removeFromCart);
+
+  cartItemsList.appendChild(cartItem);
+
+  cartTotalAmount += productPrice;
+  cartTotal.textContent = `Total: $${cartTotalAmount.toFixed(2)}`;
+}
+
+function removeFromCart(event) {
+  const cartItem = event.target.parentElement;
+  const productPrice = parseFloat(cartItem.querySelector('span:nth-child(2)').textContent.replace('$', ''));
+
+  cartItem.remove();
+
+  cartTotalAmount -= productPrice;
+  cartTotal.textContent = `Total: $${cartTotalAmount.toFixed(2)}`;
+}
+
+checkoutBtn.addEventListener('click', checkout);
+
+function checkout() {
+  alert('Thank you for your purchase!');
+  cartItemsList.innerHTML = '';
+  cartTotalAmount = 0;
+  cartTotal.textContent = `Total: $${cartTotalAmount.toFixed(2)}`;
+}
+
+</script>
+
+</body>
+</html>

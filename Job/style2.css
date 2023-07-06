@@ -1,0 +1,32 @@
+#main{
+    width: 100%;
+    background: url(Food_background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+.w3-margin-left-150 {
+  margin-left: 150px;
+}
+
+
+#MAK3 {
+    width: 400px; /* Adjust the width to make the form larger */
+    margin-right: 250px;
+  }
+  
+  .w3-row {
+    display: flex;
+  }
+  
+  .w3-half {
+    width: 50%;
+  }
+
+.w3-padding-48{
+    padding-top: 5px;
+
+}
+  

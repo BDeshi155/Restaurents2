@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<title>PlateUp! Sign up!</title>
+<link rel="icon" href="../Home/logo.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="style2.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<style>
+    .w3-lobster {
+      font-family: "Lobster", Sans-serif;
+      font-family: "Tangerine", serif;
+    }
+    
+    /* Center the loader */
+    #loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+  z-index: 1;
+  width: 65px;
+  height: 65px;
+  border: 10px solid #000000;
+  border-radius: 50%;
+  border-top: 10px solid #ffffff;
+  border-bottom: 10px solid #000000;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+    display: none;
+  
+  }
+</style>
+
+<body id="myPage" onload="myFunction()" style="margin:0;">
+  <div id="loader"></div>
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+  <div id="main" class="w3-display-container">
+    <div class="w3-display-left w3-container w3-margin-left-150">
+        <img src="logo.png" alt="">
+
+        <div class="w3-display-bottommiddle w3-container w3-cursive" style="white-space: nowrap;">
+          
+          <p><b>"Plates at your doorstep"</b></p></div>
+        </div>
+         
+  </div>
+          
+          <div id="MAK3" class="w3-display-right w3-container">
+            <div class="w3-container w3-tangerine">
+            <p class="w3-xxlarge w3-text-black">Create an Account</p>
+            </div>
+          <form action="insert.php" method="POST">
+          <div class="w3-row w3-padding-16">
+            <div class="w3-half">
+              <label class="w3-text-black"><b>First Name</b></label>
+              <input class="w3-input w3-border w3-round-xxlarge" name="first" type="text" required>
+            </div>
+            <div class="w3-half">
+              <label class="w3-text-black"><b>Last Name</b></label>
+              <input class="w3-input w3-border w3-round-xxlarge" name="last" type="text" >
+            </div>
+          </div>
+      
+          <label class="w3-text-black"><b>Email</b></label>
+          <input class="w3-input w3-border w3-round-xxlarge" name="email" type="text" required>
+
+          <br>
+
+          <label class="w3-text-black"><b>Contact Number</b></label>
+          <input class="w3-input w3-border w3-round-xxlarge" name="number" type="text" required>
+          
+        <div class = w3-padding-16 >
+          <label class="w3-text-black"><b>Password</b></label>
+          <input class="w3-input w3-border w3-round-xxlarge" name="password" type="password" required>
+        </div> 
+          <label class="w3-text-black"><b>Confirm Password</b></label>
+          <input class="w3-input w3-border w3-round-xxlarge" name="confirmPassword" type="password" required>
+          <br>
+          <div class="w3-padding-12">
+            <input class="w3-btn w3-black w3-round-xxlarge" type="submit" value="Submit">
+            
+          </div>
+          
+          
+        </form>
+      </div>
+  </div>  
+</div>
+</div>
+
+<script>
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 1500);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+  </script>
+
+</body>
+</html> 
